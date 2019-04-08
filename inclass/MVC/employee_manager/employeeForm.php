@@ -9,13 +9,14 @@ if(isset($_POST['empID'])){
     $dir =getcwd().DIRECTORY_SEPARATOR .'images'.DIRECTORY_SEPARATOR. $name;
     
     move_uploaded_file($tmpname,$dir);
+    addEmp($editEmp,$fName,$lName,$name);
    
 }
 ?>
 <form action="" method="post" enctype="multipart/form-data">
 
 <label for=""> First Name</label>
-<input type="text" name="fistName" value="<?= $empFName?>">
+<input type="text" name="firstName" value="<?= $empFName?>">
 <br>
 <label for="">Last Name</label>
 <input type="text" name ="lastName" value="<?=$empLName?>">

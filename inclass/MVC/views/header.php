@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="<?=$styles?>">
 </head>
 <body>
+
 <header>
     <h1> My Guitar Shop </h1>
     <a href="<?=$home?>">Home</a>
