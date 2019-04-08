@@ -7,7 +7,7 @@ $empPhoto = getaEmpPhoto($empID);
 echo("<h3>". $empFName. " ".$empLName ."</h3>");
 
 $str ="<a href ='?emp=$empID & editemp=$empID'> Edit </a><br>";
-$photo="<img src='./images/".$empPhoto.".jpg' style='width:75px; height:75px;'>";
+$photo="<img src='./images/".$empPhoto."'style='width:75px; height:75px;'>";
 
 echo($photo);
 

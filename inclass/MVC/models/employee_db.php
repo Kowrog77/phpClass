@@ -42,4 +42,12 @@ function getaEmpPhoto($empID){
     $photo = ($rs['photo']);
     return $photo;
 }
+function addEmp($empID,$firstName,$lastName,$photo){
+    global $connect;
+    
+    
+    $sqlAdd ="UPDATE `employee` SET `firstName`='$firstName',`lastName`='$lastName',`photo`='$photo' WHERE  `empID`='$empID'";
+    $pdos=$connect->query($sqlAdd);
+    echo($sqlAdd);
+}
 ?>

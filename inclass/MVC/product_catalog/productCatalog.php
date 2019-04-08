@@ -2,9 +2,13 @@
     
 
 <?php
+session_start();
+if($_SESSION['valid']!= "yes"){
+    header("Location: ../index.php");
+}
 $pageName = "MGS: Product Catalog";
 $styles="../css/styles.css";
-$home="../index.php";
+$home="../home.php";
 include "../views/header.php";
 include "../models/database.php";
 
