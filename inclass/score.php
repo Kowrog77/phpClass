@@ -19,6 +19,7 @@
             echo("<option value ='$i'> $i </option> ");
         }
     ?>
+    <p>hello</p>
 </select>
 <input type = "score" name ="score" placeholder = "Score"> 
 
