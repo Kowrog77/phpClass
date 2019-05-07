@@ -1,0 +1,32 @@
+.card-img-top{
+    width: 50%;
+    height: 50%;
+    float: left;
+    
+}
+.card-columns{
+    width:75%;
+    height:75%;
+    
+
+}
+#logo_pic{
+    width: 25;
+    height: 25;
+
+}
+.card{
+    background-color: #5d9de7;
+    width:55%;
+    height:55%;
+    margin-left: 5%;
+    min-height: 500px;
+    max-width: 45%;
+}
+#footerStyle{
+    width:85%;
+    height: 20%;
+    min-height: 0px;
+    max-width: 0px;
+
+}
