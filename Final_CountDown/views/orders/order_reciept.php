@@ -1,4 +1,3 @@
-
 <div class ="container">
     <table class="table">
       <thead>
@@ -7,7 +6,7 @@
           <th scope="col">QTY</th>
           <th scope="col">Price</th>
           <th scope="col">SubTotal</th>
-          <th scope="col">Edit</th>
+         
         </tr>
       </thead>
       <tbody>
@@ -30,10 +29,7 @@
           <td>$<?=$productInfo['product_price']?></td>
           <td>$<?=$subtotal?></td>
           <td>
-          <form action="" method="get">
-            <input type="hidden" name="orderDelete"value="<?= $productInfo['product_ID']?>">
-            <button type="Submit" class="btn btn-warning">Delete</button>
-          </form>
+          
           
           </td>
         </tr>
@@ -47,8 +43,5 @@
     </tr>
       </tbody>
     </table>
-    <form action="">
-      <input type="hidden" name="orderPlaced" value ="yes">
-    <button type="submit" class="btn btn-warning btn-lg btn-block">Check Out</button>
-    </form>
+    
 </div>

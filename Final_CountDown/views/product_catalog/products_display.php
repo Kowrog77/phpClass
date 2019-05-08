@@ -4,13 +4,14 @@
     <?php
     $counter=0;
         foreach($arrayProducts as $product){
-            $counter++;
+            $counter+=1;
             if (($counter%2)!=0){
                 echo("<div class='row mx-auto'>");
+                
             }
             ?>
             <div class="card border border-warning col">
-                <img src="./views/images/<?=$product['image_name']?>.jpg" class="  card-img-top mx-auto  border border-warning rounded-circle   " alt="<?=$product['image_name']?>">
+                <img src="./views/images/<?=$product['image_name']?>" class="card-img-top mx-auto  border border-warning rounded-circle   " alt="<?=$product['image_name']?>">
                 <div class="card-body mx-auto">
                     <h5 class="card-title text-center"><?=$product['product_name']?></h5>
                     <p class="card-text text-center">$<?=$product['product_price']?></p>
@@ -24,6 +25,7 @@
             </div>
         <?php
         if (($counter%2)==0){
+            
             echo("</div><br>");
         }elseif($counter == count($arrayProducts)){
             echo("</div><br>");

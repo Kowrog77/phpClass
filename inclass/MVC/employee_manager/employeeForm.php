@@ -8,6 +8,7 @@ if(isset($_POST['empID'])){
     $tmpname = $_FILES['empphoto']['tmp_name'];;
     $dir =getcwd().DIRECTORY_SEPARATOR .'images'.DIRECTORY_SEPARATOR. $name;
     
+    
     move_uploaded_file($tmpname,$dir);
     addEmp($editEmp,$fName,$lName,$name);
    

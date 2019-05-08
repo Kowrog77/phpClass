@@ -17,6 +17,7 @@ include "./views/header.php";
 $qty_ordered= filter_input(INPUT_GET,'qty_ordered');
 $product_ID = filter_input(INPUT_GET,'product_ID');
 $orderDelete = filter_input(INPUT_GET,'orderDelete');
+$orderPlaced = filter_input(INPUT_GET,'orderPlaced');
 if ($orderDelete !=NULL){
     orderDeleter($orderDelete);
 }
@@ -47,11 +48,21 @@ if($product_ID!=NUll){
 }
 
 }
-if($_SESSION['product_order']!= NULL){
+if(isset($orderPlaced) ){
+    foreach($_SESSION['product_order'] as $productBought){
+        productOrdered($productBought[0],$productBought[1]);
+    }
+    include "./views/orders/order_reciept.php";
+    $_SESSION['product_order'] = [];
+}
+elseif(!empty($_SESSION['product_order'])){
     // print_r($_SESSION['product_order']);
     
     include "./views/orders/order_display.php";
     
+}
+else{
+    include "./views/orders/emptycart.php";
 }
 
 

@@ -8,3 +8,17 @@ function orderDeleter($orderDelete){
         }
     }
 }
+function productOrdered($qty,$ID){
+    $product = getByIDproducts($ID);
+    $qty = $product['product_qty']- $qty;
+    global $connect;
+    $sqlAdd = "UPDATE `products` SET `product_qty` ='$qty' WHERE `product_ID` = '$ID'";
+    $pdos=$connect->query($sqlAdd);
+    ?>
+    <div class="alert alert-warning" role="alert">
+        
+        <p>Order Placed Thank You!</p>
+        
+    </div>
+ <?php   
+}
