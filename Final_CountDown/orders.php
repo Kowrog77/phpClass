@@ -51,6 +51,7 @@ if($product_ID!=NUll){
 if(isset($orderPlaced) ){
     foreach($_SESSION['product_order'] as $productBought){
         productOrdered($productBought[0],$productBought[1]);
+        orderList($productBought[0],$productBought[1]);
     }
     include "./views/orders/order_reciept.php";
     $_SESSION['product_order'] = [];

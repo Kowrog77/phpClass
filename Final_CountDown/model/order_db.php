@@ -21,4 +21,19 @@ function productOrdered($qty,$ID){
         
     </div>
  <?php   
+}function orderList($qty,$ID){
+    
+    $user=$_SESSION['user'];
+    global $connect;
+    $sqlAdd ="INSERT INTO `orders`( `product_ID`, `qty_ordered`, `customer_name`) VALUES ($ID,$qty, '$user')";
+    $pdos=$connect->query($sqlAdd);
+    echo($sqlAdd);
+      
+}
+function getallorders(){
+    global $connect;
+    $sql = "SELECT * FROM orders";
+    $pdostate = $connect->query($sql);
+    $arrayOrders = $pdostate->fetchAll();
+    return $arrayOrders;
 }
